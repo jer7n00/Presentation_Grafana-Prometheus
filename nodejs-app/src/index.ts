@@ -22,6 +22,7 @@ register.registerMetric(requestCounter);
 app.get('/message', (req, res) => {
   requestCounter.inc();  // Increment the request counter
   res.json({ message: 'Hello from Node.js API!' });
+  
 });
 
 // Endpoint to expose metrics
